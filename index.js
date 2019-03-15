@@ -1,7 +1,10 @@
-function takeANumber(katzDeliLine, name){
+var n = 0
+function takeANumber(katzDeliLine){
+  n++
+  katzDeliLine.push(n)
+  return `Now Serving: Customer Number ${n}`
   
-  katzDeliLine.push(`${name}`)
-  return (`Welcome, ${name}. You are number ${katzDeliLine.length} in line.`)
+ 
 }
 
 function nowServing(katzDeliLine){
@@ -21,7 +24,7 @@ function currentLine(katzDeliLine){
   var line = []
   let i = 0
   while(i < katzDeliLine.length){
-    line.push(` ` + [i+1] + `. ` + katzDeliLine[i])
+    line.push(` ${i+1}. ${katzDeliLine[i]}`)
     i++
   }
   
